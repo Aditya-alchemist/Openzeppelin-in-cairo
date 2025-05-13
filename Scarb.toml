@@ -1,0 +1,12 @@
+[package]
+name = "openzeppelincontracts"
+version = "0.1.0"
+
+[dependencies]
+openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts" }
+starknet = "2.11.4"  # Match your Cairo version
+
+
+[[target.starknet-contract]]
+
+
