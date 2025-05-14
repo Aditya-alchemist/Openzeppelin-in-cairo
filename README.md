@@ -11,3 +11,10 @@
 ![image](https://github.com/user-attachments/assets/2e1018e5-cdd4-4f60-8191-b9776bd67611)
 
 ----
+
+**NFT Minted**
+--
+
+![image](https://github.com/user-attachments/assets/d075f3a4-3b6e-4a54-930b-e842043901a3)
+
+----
