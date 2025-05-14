@@ -1,3 +1,13 @@
+#[starknet::interface]
+trait IERC<ContractState> {
+    #[abi(embed_v0)]
+    fn minting(
+        ref self: ContractState,
+        recipient: starknet::ContractAddress,
+        amount: u256
+    );
+}
+
 #[starknet::contract]
 mod MyERC20Token {
     // NOTE: If you added the entire library as a dependency,
@@ -38,5 +48,16 @@ mod MyERC20Token {
         let symbol = "TST";
         self.erc20.initializer(name, symbol);
         self.erc20.mint(recipient, fixed_supply);
+    }
+
+    #[abi(embed_v0)]
+    impl t of super::IERC<ContractState> {
+        fn minting(
+            ref self: ContractState,
+            recipient: ContractAddress,
+            amount: u256
+        ) {
+            self.erc20.mint(recipient, amount);
+        }
     }
 }
